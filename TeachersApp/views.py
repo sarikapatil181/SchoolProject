@@ -5,7 +5,7 @@ from .models import Teachers
 from django.contrib import messages
 import csv,io
 from django.views.generic import TemplateView, ListView
-from django.db.models import Q
+
 
 # Create your views here.
 def index(request):
@@ -68,12 +68,6 @@ def Teachers_upload(request):
     context = {}
     return render(request, template, context)
 
-#Search Result
-""" class SearchResultsView(ListView):
-    model = Teachers
-    template_name = 'search_result.html'
-   # lnamelist=Teachers.objects.lname
-    queryset = Teachers.objects.filter(lname__startswith='l') """
 
 def searchbar(request):
     if request.method=='GET':

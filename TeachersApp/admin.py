@@ -4,4 +4,4 @@ class TeachersAdmin(admin.ModelAdmin):
     list_display = ("fname","lname","email","subjects", "profilepic",)
 
 admin.site.register(Teachers,TeachersAdmin)
-# Register your models here.
+
